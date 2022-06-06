@@ -1,0 +1,33 @@
+
+entity Expenses {
+ID Integer required unique,
+    name String required,
+    value Double required,
+    date LocalDate required, }
+
+entity Category {
+	ID Integer required unique,
+    name String required,
+    limit Double
+}
+
+// an ignored comment
+/** not an ignored comment */
+entity Incomes {
+ID Integer required unique,
+	name String required,
+	value Double required,
+	date LocalDate required, }
+
+entity StandingOrders {
+	ID Integer required unique,
+    name String required,
+    value Double required,
+    date LocalDate required,
+    interval Integer required,
+}
+
+
+relationship OneToMany {
+    Category to Expenses
+}

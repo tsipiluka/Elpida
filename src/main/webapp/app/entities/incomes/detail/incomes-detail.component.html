@@ -1,0 +1,44 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    <div *ngIf="incomes">
+      <h2 data-cy="incomesDetailsHeading"><span jhiTranslate="elpidaApp.incomes.detail.title">Incomes</span></h2>
+
+      <hr />
+
+      <jhi-alert-error></jhi-alert-error>
+
+      <jhi-alert></jhi-alert>
+
+      <dl class="row-md jh-entity-details">
+        <dt><span jhiTranslate="global.field.id">ID</span></dt>
+        <dd>
+          <span>{{ incomes.id }}</span>
+        </dd>
+        <dt><span jhiTranslate="elpidaApp.incomes.iD">I D</span></dt>
+        <dd>
+          <span>{{ incomes.iD }}</span>
+        </dd>
+        <dt><span jhiTranslate="elpidaApp.incomes.name">Name</span></dt>
+        <dd>
+          <span>{{ incomes.name }}</span>
+        </dd>
+        <dt><span jhiTranslate="elpidaApp.incomes.value">Value</span></dt>
+        <dd>
+          <span>{{ incomes.value }}</span>
+        </dd>
+        <dt><span jhiTranslate="elpidaApp.incomes.date">Date</span></dt>
+        <dd>
+          <span>{{ incomes.date | formatMediumDate }}</span>
+        </dd>
+      </dl>
+
+      <button type="submit" (click)="previousState()" class="btn btn-info" data-cy="entityDetailsBackButton">
+        <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Back</span>
+      </button>
+
+      <button type="button" [routerLink]="['/incomes', incomes.id, 'edit']" class="btn btn-primary">
+        <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Edit</span>
+      </button>
+    </div>
+  </div>
+</div>

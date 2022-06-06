@@ -1,0 +1,28 @@
+{
+  "elpidaApp": {
+    "standingOrders": {
+      "home": {
+        "title": "Standing Orders",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Standing Orders",
+        "createOrEditLabel": "Create or edit a Standing Orders",
+        "notFound": "No Standing Orders found"
+      },
+      "created": "A new Standing Orders is created with identifier {{ param }}",
+      "updated": "A Standing Orders is updated with identifier {{ param }}",
+      "deleted": "A Standing Orders is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Standing Orders {{ id }}?"
+      },
+      "detail": {
+        "title": "Standing Orders"
+      },
+      "id": "ID",
+      "iD": "I D",
+      "name": "Name",
+      "value": "Value",
+      "date": "Date",
+      "interval": "Interval"
+    }
+  }
+}

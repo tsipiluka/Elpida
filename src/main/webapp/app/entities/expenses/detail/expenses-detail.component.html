@@ -1,0 +1,50 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    <div *ngIf="expenses">
+      <h2 data-cy="expensesDetailsHeading"><span jhiTranslate="elpidaApp.expenses.detail.title">Expenses</span></h2>
+
+      <hr />
+
+      <jhi-alert-error></jhi-alert-error>
+
+      <jhi-alert></jhi-alert>
+
+      <dl class="row-md jh-entity-details">
+        <dt><span jhiTranslate="global.field.id">ID</span></dt>
+        <dd>
+          <span>{{ expenses.id }}</span>
+        </dd>
+        <dt><span jhiTranslate="elpidaApp.expenses.iD">I D</span></dt>
+        <dd>
+          <span>{{ expenses.iD }}</span>
+        </dd>
+        <dt><span jhiTranslate="elpidaApp.expenses.name">Name</span></dt>
+        <dd>
+          <span>{{ expenses.name }}</span>
+        </dd>
+        <dt><span jhiTranslate="elpidaApp.expenses.value">Value</span></dt>
+        <dd>
+          <span>{{ expenses.value }}</span>
+        </dd>
+        <dt><span jhiTranslate="elpidaApp.expenses.date">Date</span></dt>
+        <dd>
+          <span>{{ expenses.date | formatMediumDate }}</span>
+        </dd>
+        <dt><span jhiTranslate="elpidaApp.expenses.category">Category</span></dt>
+        <dd>
+          <div *ngIf="expenses.category">
+            <a [routerLink]="['/category', expenses.category?.id, 'view']">{{ expenses.category?.id }}</a>
+          </div>
+        </dd>
+      </dl>
+
+      <button type="submit" (click)="previousState()" class="btn btn-info" data-cy="entityDetailsBackButton">
+        <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Back</span>
+      </button>
+
+      <button type="button" [routerLink]="['/expenses', expenses.id, 'edit']" class="btn btn-primary">
+        <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Edit</span>
+      </button>
+    </div>
+  </div>
+</div>

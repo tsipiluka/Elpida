@@ -48,6 +48,11 @@ public class CacheConfiguration {
             createCache(cm, live.wh0cares.elpida.domain.User.class.getName());
             createCache(cm, live.wh0cares.elpida.domain.Authority.class.getName());
             createCache(cm, live.wh0cares.elpida.domain.User.class.getName() + ".authorities");
+            createCache(cm, live.wh0cares.elpida.domain.Expenses.class.getName());
+            createCache(cm, live.wh0cares.elpida.domain.Category.class.getName());
+            createCache(cm, live.wh0cares.elpida.domain.Category.class.getName() + ".expenses");
+            createCache(cm, live.wh0cares.elpida.domain.Incomes.class.getName());
+            createCache(cm, live.wh0cares.elpida.domain.StandingOrders.class.getName());
             // jhipster-needle-ehcache-add-entry
         };
     }
